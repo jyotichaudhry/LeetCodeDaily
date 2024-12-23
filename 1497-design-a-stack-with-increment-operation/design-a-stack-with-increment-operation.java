@@ -22,13 +22,11 @@ return stack1.isEmpty() ?  -1:  stack1.pop();
     public void increment(int k, int val) {
         if (stack1.isEmpty()) return;
         int diff = stack1.size() - k;
-        int count = k;
-        while (!stack1.isEmpty() && count > 0){
+        while (!stack1.isEmpty() ){
             if (diff > 0){
                 stack2.add(stack1.pop());
             } else {
                 stack2.add(stack1.pop()+val);
-                count--;
             }
              diff--;
         }
