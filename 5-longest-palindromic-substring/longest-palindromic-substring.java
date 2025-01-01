@@ -12,7 +12,7 @@ class Solution {
         }
         for (int i = n-1; i >=0 ; i--) {
             for (int j = i+1; j < s.length(); j++) {
-                if (s.charAt(i)==s.charAt(j) && (j-i<=1 || isPalindrome[i+1][j-1])){
+                if (s.charAt(i)==s.charAt(j) && (j-i==1 || isPalindrome[i+1][j-1])){
                     isPalindrome[i][j]=true;
                 }
                 if(isPalindrome[i][j] && j-i+1>maxLen){
